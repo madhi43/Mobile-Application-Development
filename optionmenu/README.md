@@ -11,20 +11,91 @@ Latest Version Android Studio
 
 ## ALGORITHM:
 
+Step 1: Open Android Stdio and then click on File -> New -> New project.
 
+Step 2: Then type the Application name as “optionmenu″ and click Next.
+
+Step 3: Then select the Minimum SDK as shown below and click Next.
+
+Step 4: Then select the Empty Activity and click Next. Finally click Finish.
+
+Step 5: Design layout in activity_main.xml.
+
+Step 6: Design option layout in option.xml.
+
+Step 7: Add and Display option menu in MainActivity file.
+
+Step 8: Save and run the application.
 
 ## PROGRAM:
 ```
 /*
 Program to print the text “optionmenu”.
-Developed by:
-Registeration Number :
+Developed by: srimathi k
+Registeration Number : 212221040161
 */
 ```
+
+## Activity_xml File:
+
+    <?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/amgus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
+  ## OPTION XML CODE:
+    <?xml version="1.0" encoding="utf-8"?>
+    <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="PRIME 1" />
+    <item android:title="PRIME 2" />
+    <item android:title="PRIME 3" />
+    </menu>
+
+## MainActivity.java File:
+
+      package com.example.menuapp;
+
+    import androidx.appcompat.app.AppCompatActivity;
+
+    import android.os.Bundle;
+    import android.view.Menu;
+    import android.view.MenuInflater;
+
+    public class MainActivity extends AppCompatActivity {
+     @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater m = getMenuInflater();
+        m.inflate(R.menu.option,menu);
+        return true;
+    }
+    }
 
 ## OUTPUT
 
 
+![image](https://github.com/madhi43/Mobile-Application-Development/assets/103943383/6e3be43a-8563-4035-bcd0-2a09d2600fb8)
+
+![image](https://github.com/madhi43/Mobile-Application-Development/assets/103943383/c5a22459-1f1f-4aed-9c03-c9d980fb42d1)
 
 
 ## RESULT
